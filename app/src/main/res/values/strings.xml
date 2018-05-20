@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Home Library</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_email">O endereço de e-mail é inválido</string>
+    <string name="error_invalid_password">Senha fora dos padrões de segurança</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Campo obrigatório</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+</resources>
