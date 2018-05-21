@@ -21,4 +21,28 @@ public class LivroModel extends BaseModel{
     List<NotaLeituraModel> notasLeitura;
     List<EmprestimoModel> registrosEmprestimo;
     EmprestimoModel emprestimoAtual;
+
+    protected LivroModel(int id) {
+        super(id);
+    }
+
+    @Override
+    public String getTableName() {
+        return null;
+    }
+
+    @Override
+    public String CreateTable() {
+        return null;
+    }
+
+    @Override
+    public List<String> getValues() {
+        return null;
+    }
+
+    @Override
+    public List<String> getColumns() {
+        return null;
+    }
 }

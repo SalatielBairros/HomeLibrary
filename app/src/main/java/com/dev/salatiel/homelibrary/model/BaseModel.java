@@ -5,16 +5,24 @@ import com.dev.salatiel.interfaces.IEntityModel;
 import java.util.Date;
 
 public abstract class BaseModel implements IEntityModel {
-    private long _id;
+    public static final String C_ID = "_id";
+    public static final String C_DATA_CADASTRO = "dt_cadastro";
+    public static final String C_DATA_MODIFICACAO = "dt_alteracao";
+    private int _id;
     private Date dataCadastro;
     private Date dataAlteracao;
 
-    public long get_id() {
+    protected BaseModel(int id){
+        this._id = id;
+    }
+
+    public int get_id() {
         return _id;
     }
 
-    public void set_id(long _id) {
-        this._id = _id;
+    @Override
+    public String DropTable() {
+        return "DROP TABLE IF EXISTS " + getTableName();
     }
 
     public Date getDataCadastro() {
