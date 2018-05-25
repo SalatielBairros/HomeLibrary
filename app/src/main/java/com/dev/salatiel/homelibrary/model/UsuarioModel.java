@@ -1,29 +1,84 @@
 package com.dev.salatiel.homelibrary.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioModel extends BaseModel {
+    private static final String TableName = "HOME_LIBRARY_USER";
+    public static final String C_NOME = "NOME";
+    public static final String C_SENHA = "SENHA";
+    public static final String C_EMAIL = "EMAIL";
+
+    private String nome;
+    private String senha;
+    private String email;
+
     protected UsuarioModel(int id) {
         super(id);
     }
 
     @Override
     public String getTableName() {
-        return null;
+        return TableName;
     }
 
     @Override
     public String CreateTable() {
-        return null;
+        return "CREATE TABLE "+ getTableName() +" ("
+                + C_ID + " integer primary key autoincrement,"
+                + C_DATA_CADASTRO + " datetime,"
+                + C_DATA_MODIFICACAO + " datetime,"
+                + C_NOME + " text,"
+                + C_SENHA + " text,"
+                + C_EMAIL + " text"
+                +")";
     }
 
     @Override
     public List<String> getValues() {
-        return null;
+        List<String> retList = new ArrayList<>();
+        retList.add(Integer.toString(this.get_id()));
+        retList.add(this.getDataCadastro().toString());
+        retList.add(this.getDataAlteracao().toString());
+        retList.add(this.getNome());
+        retList.add(this.getSenha());
+        retList.add(this.getEmail());
+        return retList;
     }
 
     @Override
     public List<String> getColumns() {
-        return null;
+        List<String> retList = new ArrayList<>();
+        retList.add(C_ID);
+        retList.add(C_DATA_CADASTRO);
+        retList.add(C_DATA_MODIFICACAO);
+        retList.add(C_NOME);
+        retList.add(C_SENHA);
+        retList.add(C_EMAIL);
+        return retList;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

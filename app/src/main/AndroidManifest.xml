@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".RegistroLeituraActivity">
         </activity>
+        <activity android:name=".CadastroUsuarioActivity">
+        </activity>
     </application>
 
 </manifest>

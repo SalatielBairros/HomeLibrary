@@ -68,7 +68,7 @@ public class EmprestimoModel extends BaseModel {
                 + C_NOME_PESSOA + " text,"
                 + C_DATA_EMPRESTIMO + " date,"
                 + C_DATA_DEVOLUCAO_PREVISTA + " date,"
-                + C_DEVOLVIDO + " integer"
+                + C_DEVOLVIDO + " integer,"
                 + C_DATA_DEVOLUCAO + " date"
                 +")";
     }

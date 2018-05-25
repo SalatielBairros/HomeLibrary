@@ -11,4 +11,12 @@
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_field_required">Campo obrigatório</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="login">Login</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="nome">Nome</string>
+    <string name="confirmacao_senha">Confirmação de senha</string>
+    <string name="gravar">Gravar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="entrar">Entrar</string>
 </resources>

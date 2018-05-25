@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -10,5 +10,61 @@
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context="com.dev.salatiel.homelibrary.LoginActivity">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/login"
+            android:id="@+id/tvTitle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
-</LinearLayout>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtEmail"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentLeft="true"
+            android:inputType="textEmailAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:hint="@string/email"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSenha"
+            android:layout_below="@+id/edtEmail"
+            android:layout_alignParentLeft="true"
+            android:inputType="textPassword"
+            android:layout_alignParentStart="true"
+            android:hint="@string/senha"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    <Button
+            android:text="@string/entrar"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEntrar"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/edtSenha"
+            android:layout_alignEnd="@+id/edtSenha"/>
+    <Button
+            android:text="@string/cadastrar"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCadastrar"
+            android:layout_below="@+id/btnEntrar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"/>
+
+</RelativeLayout>
