@@ -1,0 +1,5 @@
+UC1 - Manter livros
+UC2 - Listar livros
+UC3 - Autenticação sistema
+UC4 - Registro leitura
+UC5 - Registro empréstimos
