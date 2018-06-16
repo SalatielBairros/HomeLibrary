@@ -40,6 +40,10 @@ public class LivroModel extends BaseModel{
         super(id);
     }
 
+    public static LivroModel getInstance(){
+        return new LivroModel(0);
+    }
+
     @Override
     public String getTableName() {
         return TableName;

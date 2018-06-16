@@ -17,6 +17,10 @@ public class NotaLeituraModel extends BaseModel {
         super(id);
     }
 
+    public static NotaLeituraModel getInstance(){
+        return new NotaLeituraModel(0);
+    }
+
     @Override
     public String getTableName() {
         return TableName;

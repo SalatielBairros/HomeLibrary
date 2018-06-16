@@ -26,6 +26,10 @@ public class EmprestimoModel extends BaseModel {
         return nomePessoa;
     }
 
+    public static EmprestimoModel getInstance(){
+        return new EmprestimoModel(0);
+    }
+
     public void setNomePessoa(String nomePessoa) {
         this.nomePessoa = nomePessoa;
     }

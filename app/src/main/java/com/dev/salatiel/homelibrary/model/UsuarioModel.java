@@ -17,6 +17,21 @@ public class UsuarioModel extends BaseModel {
         super(id);
     }
 
+    private UsuarioModel(int id, String nome, String senha, String email) {
+        super(id);
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+    }
+
+    public static UsuarioModel getInstance(){
+        return new UsuarioModel(0);
+    }
+
+    public static UsuarioModel getInstance(int id, String nome, String senha, String email){
+        return new UsuarioModel(id, nome, senha, email);
+    }
+
     @Override
     public String getTableName() {
         return TableName;
