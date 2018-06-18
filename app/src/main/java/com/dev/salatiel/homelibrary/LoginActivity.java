@@ -1,31 +1,28 @@
 package com.dev.salatiel.homelibrary;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.security.keystore.UserNotAuthenticatedException;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.dev.salatiel.homelibrary.Controllers.UsuarioController;
-import com.dev.salatiel.homelibrary.model.UsuarioModel;
 
 /**
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String TAG = "LoginActivity";
     UsuarioController usuarioController;
 
     EditText txtEmail;
     EditText txtSenha;
     Button btnCadastrar;
     Button btnEntrar;
-
-    Intent in;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +44,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 try {
                     usuarioController.login(email, senha);
-                    in = new Intent(LoginActivity.this, ListActivity.class);
-                    startActivity(in);
+                    startActivity(new Intent(LoginActivity.this, ListActivity.class));
                 } catch (UserNotAuthenticatedException e) {
-                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG);
+                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                }catch (Exception ex){
+                    Log.e(TAG, getString(R.string.erro_realizar_login), ex);
+                    Toast.makeText(LoginActivity.this, R.string.erro_realizar_login, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -58,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(LoginActivity.this, CadastroUsuarioActivity.class));
             }
         });
     }

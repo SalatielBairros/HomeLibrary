@@ -1,6 +1,7 @@
 package com.dev.salatiel.homelibrary.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class UsuarioModel extends BaseModel {
@@ -24,12 +25,26 @@ public class UsuarioModel extends BaseModel {
         this.email = email;
     }
 
+    private UsuarioModel(String nome, String senha, String email) {
+        super(0);
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+    }
+
     public static UsuarioModel getInstance(){
         return new UsuarioModel(0);
     }
 
     public static UsuarioModel getInstance(int id, String nome, String senha, String email){
         return new UsuarioModel(id, nome, senha, email);
+    }
+
+    public static UsuarioModel createNew(String nome, String senha, String email){
+        UsuarioModel um = new UsuarioModel(nome, senha, email);
+        um.setDataAlteracao(new Date());
+        um.setDataCadastro(new Date());
+        return um;
     }
 
     @Override

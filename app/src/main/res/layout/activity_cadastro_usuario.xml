@@ -73,7 +73,7 @@
             android:textColor="@color/colorWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCadastrar"
+            android:id="@+id/btnGravarUsuario"
             android:layout_below="@+id/edtConfirmacaoSenha"
             android:layout_marginTop="30dp"
             android:layout_alignStart="@+id/edtSenha"
