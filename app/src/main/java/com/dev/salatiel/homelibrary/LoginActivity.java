@@ -10,11 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.dev.salatiel.homelibrary.Controllers.UsuarioController;
+import com.dev.salatiel.interfaces.IAppActivity;
 
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements IAppActivity {
 
     public static final String TAG = "LoginActivity";
     UsuarioController usuarioController;
@@ -28,13 +29,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        usuarioController = new UsuarioController(this);
+        verifyUserSession();
 
         txtEmail = findViewById(R.id.edtEmail);
         txtSenha = findViewById(R.id.edtSenha);
         btnCadastrar = findViewById(R.id.btnCadastrar);
         btnEntrar = findViewById(R.id.btnEntrar);
-
-        usuarioController = new UsuarioController(this);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, CadastroUsuarioActivity.class));
             }
         });
+    }
+
+    @Override
+    public void verifyUserSession() {
+        if(usuarioController.verificaLogin()){
+            startActivity(new Intent(LoginActivity.this, ListActivity.class));
+        }
     }
 }
 

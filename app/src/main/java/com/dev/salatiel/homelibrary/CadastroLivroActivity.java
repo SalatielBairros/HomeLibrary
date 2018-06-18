@@ -10,6 +10,8 @@ public class CadastroLivroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_livro);
+
+        showISBNModal();
     }
 
     public void showISBNModal(){

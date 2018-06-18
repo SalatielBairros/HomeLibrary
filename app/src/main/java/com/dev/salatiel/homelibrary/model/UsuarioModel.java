@@ -36,6 +36,10 @@ public class UsuarioModel extends BaseModel {
         return new UsuarioModel(0);
     }
 
+    public static UsuarioModel getInstance(int id){
+        return new UsuarioModel(id);
+    }
+
     public static UsuarioModel getInstance(int id, String nome, String senha, String email){
         return new UsuarioModel(id, nome, senha, email);
     }
