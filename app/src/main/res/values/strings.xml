@@ -26,4 +26,10 @@
     <string name="informe_isbn">Informe o ISBN</string>
     <string name="isbn_sigla">ISBN</string>
     <string name="enviar">Enviar</string>
+    <string name="t_tulo_livro">Título Livro</string>
+    <string name="autor">Autor</string>
+    <string name="editora">Editora</string>
+    <string name="sinopse">Sinópse</string>
+    <string name="salvar">Salvar</string>
+    <string name="cadastro_livro">Cadastro Livro</string>
 </resources>
