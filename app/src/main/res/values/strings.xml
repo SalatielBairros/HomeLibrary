@@ -32,4 +32,5 @@
     <string name="sinopse">Sinópse</string>
     <string name="salvar">Salvar</string>
     <string name="cadastro_livro">Cadastro Livro</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
