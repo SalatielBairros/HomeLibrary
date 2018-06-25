@@ -22,6 +22,10 @@ HomeLibrary contará com a tecnologia de leitura de QRCode para etiquetação e 
 Controle de trocas - O usuário poderá listar os livros que estão emprestados, ou que são emprestados dentro do aplicativo.
 
 
+## Requisitos não funcionais.
+Min API 23.
+
+
 #### Direitos Autorais.
 Ideia criada e desenvolvida inicialmente pelo dono do projeto: [LinkedIn Salatiel](https://www.linkedin.com/in/salatiel-bairros/)Salatiel Costa Bairros.
 Qualquer cópia do software aqui apresentado não deverá ser vendida sem consenso do criador do projeto. Contribuições são sempre bem-vindas.
