@@ -42,6 +42,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
     @Override
     public void onDataLoaded(String data) {
         txtIsbn.setText(data);
+        populateFields(livroController.getByISBN(data));
     }
 
     private void setFields(){
@@ -84,6 +85,14 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
                 livroController.insereDado(livro);
             }
         }
+    }
+
+    private void populateFields(LivroModel livro){
+        txtIsbn.setText(livro.getIsbn());
+        txtTitulo.setText(livro.getTitulo());
+        txtAutor.setText(livro.getAutor());
+        txtEditora.setText(livro.getEditora());
+        txtSinopse.setText(livro.getSinopse());
     }
 
     private LivroModel getData(){

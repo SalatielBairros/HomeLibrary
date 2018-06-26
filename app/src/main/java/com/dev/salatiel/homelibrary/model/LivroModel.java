@@ -40,8 +40,17 @@ public class LivroModel extends BaseModel{
         super(id);
     }
 
+    protected LivroModel(int id, String isbn) {
+        super(id);
+        this.isbn = isbn;
+    }
+
     public static LivroModel getInstance(){
         return new LivroModel(0);
+    }
+
+    public static LivroModel getInstance(String isbn){
+        return new LivroModel(0, isbn);
     }
 
     @Override
