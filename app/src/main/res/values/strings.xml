@@ -33,4 +33,6 @@
     <string name="salvar">Salvar</string>
     <string name="cadastro_livro">Cadastro Livro</string>
     <string name="cancelar">Cancelar</string>
+    <string name="id">Id</string>
+    <string name="titulo_livro">Título Livro</string>
 </resources>

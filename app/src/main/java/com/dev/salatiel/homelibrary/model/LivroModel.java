@@ -49,6 +49,10 @@ public class LivroModel extends BaseModel{
         return new LivroModel(0);
     }
 
+    public static LivroModel getInstance(int id){
+        return new LivroModel(id);
+    }
+
     public static LivroModel getInstance(String isbn){
         return new LivroModel(0, isbn);
     }
@@ -71,9 +75,9 @@ public class LivroModel extends BaseModel{
                 + C_AUTOR + " text,"
                 + C_ANO + " integer,"
                 + C_PAGINAS + " integer,"
-                + C_PRECO + " real"
-                + C_STATUS + " integer"
-                + C_STATUS_LEITURA + " integer"
+                + C_PRECO + " real,"
+                + C_STATUS + " integer,"
+                + C_STATUS_LEITURA + " integer,"
                 + C_STATUS_LIVRO + " integer"
                 +")";
     }

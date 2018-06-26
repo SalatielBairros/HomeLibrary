@@ -17,7 +17,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
 
     LivroController livroController;
 
-    int idLivro;
+    int idLivro = 0;
     EditText txtIsbn;
     EditText txtTitulo;
     EditText txtAutor;
@@ -65,6 +65,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
     }
 
     private boolean validate(){
+        //TODO: Verificar se ID é 0 e procurar ISBN.
         String message = "";
         if(txtTitulo.getText().toString().trim().isEmpty()
                 || txtAutor.getText().toString().trim().isEmpty())
@@ -82,6 +83,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
             if(idLivro > 0){
                 livroController.alteraRegistro(livro);
             }else{
+                //TODO: Retornar ID.
                 livroController.insereDado(livro);
             }
         }
@@ -96,6 +98,22 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
     }
 
     private LivroModel getData(){
-        return LivroModel.getInstance();
+        LivroModel livro = LivroModel.getInstance(idLivro);
+        livro.setIsbn(
+                txtIsbn.getText().toString()
+        );
+        livro.setTitulo(
+                txtTitulo.getText().toString()
+        );
+        livro.setAutor(
+                txtAutor.getText().toString()
+        );
+        livro.setEditora(
+                txtEditora.getText().toString()
+        );
+        livro.setSinopse(
+                txtSinopse.getText().toString()
+        );
+        return livro;
     }
 }
