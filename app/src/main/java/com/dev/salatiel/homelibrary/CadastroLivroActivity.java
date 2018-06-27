@@ -98,7 +98,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
     }
 
     private LivroModel getData(){
-        LivroModel livro = LivroModel.getInstance(idLivro);
+        LivroModel livro = LivroModel.createNew(idLivro);
         livro.setIsbn(
                 txtIsbn.getText().toString()
         );

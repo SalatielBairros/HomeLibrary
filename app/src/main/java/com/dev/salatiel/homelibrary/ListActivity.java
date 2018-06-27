@@ -44,8 +44,8 @@ public class ListActivity extends AppCompatActivity {
     private void carregarLista(){
         LivroModel model = LivroModel.getInstance();
         final Cursor cursor = livroController.carregaDados(model);
-        String[] nomeCampos = model.getColumns().toArray(new String[0]);
-        int[] idViews = new int[] {R.id.idLivro, R.id.tituloLivro, R.id.tvAutor, R.id.tvEditora};
+        String[] nomeCampos = model.getViewColumns().toArray(new String[0]);
+        int[] idViews = new int[] {R.id.tituloLivro, R.id.tvAutor, R.id.tvEditora};
 
         SimpleCursorAdapter adaptador = new SimpleCursorAdapter(ListActivity.this,
                 R.layout.item_lista_livros,

@@ -5,6 +5,7 @@ import com.dev.salatiel.homelibrary.enums.StatusLeituraLivro;
 import com.dev.salatiel.homelibrary.enums.StatusLivro;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LivroModel extends BaseModel{
@@ -51,6 +52,19 @@ public class LivroModel extends BaseModel{
 
     public static LivroModel getInstance(int id){
         return new LivroModel(id);
+    }
+
+    public static LivroModel createNew(int id){
+        LivroModel livro = getInstance(id);
+
+        if(id == 0){
+            livro.setDataCadastro(new Date());
+            livro.setStatus(StatusBase.Ativo);
+            livro.setStatusLeitura(StatusLeituraLivro.Pendente);
+            livro.setStatusLivro(StatusLivro.Disponivel);
+        }
+        livro.setDataAlteracao(new Date());
+        return livro;
     }
 
     public static LivroModel getInstance(String isbn){
@@ -119,6 +133,14 @@ public class LivroModel extends BaseModel{
         retList.add(C_STATUS);
         retList.add(C_STATUS_LEITURA);
         retList.add(C_STATUS_LIVRO);
+        return retList;
+    }
+
+    public List<String> getViewColumns() {
+        List<String> retList = new ArrayList<>();
+        retList.add(C_TITULO);
+        retList.add(C_AUTOR);
+        retList.add(C_EDITORA);
         return retList;
     }
 
