@@ -35,4 +35,6 @@
     <string name="cancelar">Cancelar</string>
     <string name="id">Id</string>
     <string name="titulo_livro">Título Livro</string>
+    <string name="drawer_open">Abrir Menu</string>
+    <string name="drawer_close">Fechar Menu</string>
 </resources>
