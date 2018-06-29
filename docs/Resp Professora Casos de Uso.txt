@@ -1,0 +1,11 @@
+1) no UC 1: Salvar os dados do aplicativo remotamente através de um WebService, sendo periodicamente sincronizado
+
+Neste primieiro momento seria salvo no sqlite? 
+
+2) UC2 menciona preferências do usuário, qual é este UC? E quais seriam as preferências possíveis? 
+
+3) Em UC2 podem utilizar a biblioteca Picaso ou Glide para exibir a imagem (capa) de um livro.
+
+4) Em UC3, poderia fazer o login pelo Firebase? Nele vocês consguem fazer login pelo Gmail, por exemplo, sem a necessidade de criação de conta. Se não utilizarem algum recurso similar, será necessário criar uma API para ser consumida e realizar o login.
+
+5) Não esqueçam de incluir os protótipos. Podem ser bem iniciais neste momento e na entrega final, serem mais elaborados (ou captura de telas do app)
