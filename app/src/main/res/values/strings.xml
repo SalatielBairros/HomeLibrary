@@ -37,4 +37,6 @@
     <string name="titulo_livro">Título Livro</string>
     <string name="drawer_open">Abrir Menu</string>
     <string name="drawer_close">Fechar Menu</string>
+    <string name="meus_livros">Meus Livros</string>
+    <string name="emprestimos">Empréstimos</string>
 </resources>

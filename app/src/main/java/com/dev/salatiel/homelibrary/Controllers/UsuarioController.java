@@ -10,6 +10,10 @@ public class UsuarioController extends BaseController {
     public static final String UserSessionPreferences = "UserSessionPpeferences";
     private SharedPreferences sharedPreferences;
 
+    public static UsuarioController getInstance(Context context){
+        return new UsuarioController(context);
+    }
+
     public UsuarioController(Context context) {
         super(context);
         sharedPreferences = context.getSharedPreferences(UserSessionPreferences, Context.MODE_PRIVATE);
@@ -61,8 +65,8 @@ public class UsuarioController extends BaseController {
     private UsuarioModel getUserFromCursor(Cursor cursor){
         return UsuarioModel.getInstance(
                 Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(UsuarioModel.C_ID))),
-                cursor.getString(cursor.getColumnIndexOrThrow(UsuarioModel.C_SENHA)),
                 cursor.getString(cursor.getColumnIndexOrThrow(UsuarioModel.C_NOME)),
+                cursor.getString(cursor.getColumnIndexOrThrow(UsuarioModel.C_SENHA)),
                 cursor.getString(cursor.getColumnIndexOrThrow(UsuarioModel.C_EMAIL))
         );
     }

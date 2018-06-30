@@ -2,18 +2,18 @@ package com.dev.salatiel.homelibrary;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.dev.salatiel.homelibrary.ActivityBase.BaseFormActivity;
 import com.dev.salatiel.homelibrary.Controllers.LivroController;
 import com.dev.salatiel.homelibrary.model.LivroModel;
 import com.dev.salatiel.interfaces.ICustomDataListener;
 
 //TODO: Interface base
 //TODO: Interface crud
-public class CadastroLivroActivity extends AppCompatActivity implements ICustomDataListener {
+public class CadastroLivroActivity extends BaseFormActivity<LivroModel> implements ICustomDataListener {
 
     LivroController livroController;
 
@@ -29,8 +29,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_livro);
-        setFields();
-        setEvents();
+        basicLoad();
         showISBNModal();
     }
 
@@ -45,7 +44,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
         populateFields(livroController.getByISBN(data));
     }
 
-    private void setFields(){
+    public void setFields(){
         livroController = new LivroController(this);
         txtIsbn = findViewById(R.id.edtISBN);
         txtTitulo = findViewById(R.id.edtTitulo);
@@ -55,16 +54,16 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
         btnSalvar = findViewById(R.id.btnSalvarLivro);
     }
 
-    private void setEvents(){
+    public void setEvents(){
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                salvar();
+                save();
             }
         });
     }
 
-    private boolean validate(){
+    public boolean validate(){
         //TODO: Verificar se ID é 0 e procurar ISBN.
         String message = "";
         if(txtTitulo.getText().toString().trim().isEmpty()
@@ -77,9 +76,9 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
         return false;
     }
 
-    private void salvar(){
+    public void save(){
         if(validate()){
-            LivroModel livro = getData();
+            LivroModel livro = getFields();
             if(idLivro > 0){
                 livroController.alteraRegistro(livro);
             }else{
@@ -89,7 +88,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
         }
     }
 
-    private void populateFields(LivroModel livro){
+    public void populateFields(LivroModel livro){
         txtIsbn.setText(livro.getIsbn());
         txtTitulo.setText(livro.getTitulo());
         txtAutor.setText(livro.getAutor());
@@ -97,7 +96,7 @@ public class CadastroLivroActivity extends AppCompatActivity implements ICustomD
         txtSinopse.setText(livro.getSinopse());
     }
 
-    private LivroModel getData(){
+    public LivroModel getFields(){
         LivroModel livro = LivroModel.createNew(idLivro);
         livro.setIsbn(
                 txtIsbn.getText().toString()
