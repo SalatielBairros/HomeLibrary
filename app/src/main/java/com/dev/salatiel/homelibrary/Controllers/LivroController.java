@@ -1,6 +1,7 @@
 package com.dev.salatiel.homelibrary.Controllers;
 
 import android.content.Context;
+import android.database.Cursor;
 import com.dev.salatiel.homelibrary.model.LivroModel;
 import com.dev.salatiel.homelibrary.webservices.GoogleApiRequest;
 import org.json.JSONException;
@@ -9,6 +10,7 @@ import org.json.JSONObject;
 import java.util.concurrent.ExecutionException;
 
 public class LivroController extends BaseController {
+
     public LivroController(Context context) {
         super(context);
     }
@@ -31,6 +33,12 @@ public class LivroController extends BaseController {
         }finally {
             return retBook;
         }
+    }
+
+    public boolean verifyIfExistsByISBN(String isbn){
+        String whereQuery = LivroModel.C_ISBN + " = " + isbn;
+        Cursor ret = carregaDados(LivroModel.getInstance(), whereQuery);
+        return (ret.getCount() > 0);
     }
 
     private LivroModel gbooksToModel(JSONObject bookJson, LivroModel livroModel) throws JSONException {

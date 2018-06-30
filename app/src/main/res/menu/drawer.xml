@@ -12,20 +12,20 @@
         <item
             android:id="@+id/btnMinhasLeituras"
             android:icon="@drawable/ic_reading"
-            android:title="Minhas leituras" />
+            android:title="@string/minhas_leituras" />
         <item
             android:id="@+id/btnConsultarLivro"
             android:icon="@drawable/ic_search"
-            android:title="Consultar Livro" />
+            android:title="@string/consultar_livro" />
     </group>
     <group android:checkableBehavior="single">
             <item
                 android:id="@+id/btnConfiguracoes"
                 android:icon="@drawable/ic_settings"
-                android:title="Settings" />
+                android:title="@string/configuracoes" />
             <item
                     android:id="@+id/btnSair"
                     android:icon="@drawable/ic_shutdown"
-                    android:title="Sair" />
+                    android:title="@string/sair" />
      </group>
 </menu>

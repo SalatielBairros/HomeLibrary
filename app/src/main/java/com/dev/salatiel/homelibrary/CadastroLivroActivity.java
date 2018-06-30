@@ -64,11 +64,13 @@ public class CadastroLivroActivity extends BaseFormActivity<LivroModel> implemen
     }
 
     public boolean validate(){
-        //TODO: Verificar se ID é 0 e procurar ISBN.
         String message = "";
         if(txtTitulo.getText().toString().trim().isEmpty()
                 || txtAutor.getText().toString().trim().isEmpty())
             message = getString(R.string.erro_validacao_preenchimento);
+        else if(idLivro == 0 && livroController.verifyIfExistsByISBN(txtIsbn.getText().toString())){
+            message = getString(R.string.livro_existe_cadastrado);
+        }
 
         if(message.isEmpty()) return true;
 
@@ -85,6 +87,8 @@ public class CadastroLivroActivity extends BaseFormActivity<LivroModel> implemen
                 //TODO: Retornar ID.
                 livroController.insereDado(livro);
             }
+
+            goToHomePage(this);
         }
     }
 

@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".CadastroUsuarioActivity">
         </activity>
+        <activity android:name=".EmprestimosListActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package com.dev.salatiel.homelibrary.ActivityBase;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,11 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import com.dev.salatiel.homelibrary.CadastroLivroActivity;
+import com.dev.salatiel.homelibrary.*;
 import com.dev.salatiel.homelibrary.Controllers.UsuarioController;
-import com.dev.salatiel.homelibrary.ListActivity;
-import com.dev.salatiel.homelibrary.LoginActivity;
-import com.dev.salatiel.homelibrary.R;
 import com.dev.salatiel.homelibrary.model.UsuarioModel;
 import com.dev.salatiel.interfaces.IBaseActivity;
 
@@ -65,6 +64,22 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseAct
         setSideBar();
     }
 
+    public void goToHomePage(Context context){
+        Intent intent = new Intent(context, ListActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToEmprestimosList(Context context){
+        Intent intent = new Intent(context, EmprestimosListActivity.class);
+        startActivity(intent);
+    }
+
+    public void logout(Context context){
+        getUsuarioController().logout();
+        Intent intent = new Intent(context, LoginActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(mDrawerToggle.onOptionsItemSelected(item)) {
@@ -81,6 +96,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseAct
     }
 
     private void setSidebarEvents(){
+        final Activity thisActivity = this;
+
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public boolean onOptionsItemSelected(MenuItem item) {
@@ -91,6 +108,16 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseAct
         nvDrawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+
+                if(id == R.id.btnMeusLivros){
+                    goToHomePage(thisActivity);
+                }else if(id == R.id.btnEmprestimos){
+                    goToEmprestimosList(thisActivity);
+                }else if(id == R.id.btnSair){
+                    logout(thisActivity);
+                }
+
                 mDrawer.closeDrawers();  // CLOSE DRAWER
                 return true;
             }

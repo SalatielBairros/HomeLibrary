@@ -39,4 +39,9 @@
     <string name="drawer_close">Fechar Menu</string>
     <string name="meus_livros">Meus Livros</string>
     <string name="emprestimos">Empréstimos</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="minhas_leituras">Minhas leituras</string>
+    <string name="consultar_livro">Consultar Livro</string>
+    <string name="sair">Sair</string>
+    <string name="livro_existe_cadastrado">Já existe este livro cadastrado.</string>
 </resources>
