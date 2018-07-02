@@ -5,4 +5,6 @@ public interface IBaseFormActivity<T extends IEntityModel> {
     void save();
     void populateFields(T model);
      T getFields();
+     void getParameters();
+     void loadData();
 }

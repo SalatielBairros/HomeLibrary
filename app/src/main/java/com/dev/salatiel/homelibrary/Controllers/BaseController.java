@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import com.dev.salatiel.homelibrary.DataAccess.HomeLibraryContext;
 import com.dev.salatiel.interfaces.IEntityModel;
 
@@ -16,7 +17,7 @@ public class BaseController {
         banco = new HomeLibraryContext(context);
     }
 
-    public String insereDado(IEntityModel model){
+    public long insereDado(IEntityModel model){
         ContentValues valores;
         db = banco.getWritableDatabase();
         valores = new ContentValues();
@@ -27,10 +28,9 @@ public class BaseController {
         long resultado = db.insert(model.getTableName(), null, valores);
         db.close();
         if (resultado == -1) {
-            return "Erro ao inserir registro";
-        } else {
-            return "Registro Inserido com sucesso";
+            throw new SQLiteException("Sistema não retornou identificador válido.");
         }
+        return resultado;
     }
 
     public Cursor carregaDados(IEntityModel model){

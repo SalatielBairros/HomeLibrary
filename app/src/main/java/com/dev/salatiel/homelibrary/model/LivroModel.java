@@ -3,7 +3,12 @@ package com.dev.salatiel.homelibrary.model;
 import com.dev.salatiel.enums.StatusBase;
 import com.dev.salatiel.homelibrary.enums.StatusLeituraLivro;
 import com.dev.salatiel.homelibrary.enums.StatusLivro;
+import com.dev.salatiel.util.DateTimeUtil;
 
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -100,8 +105,8 @@ public class LivroModel extends BaseModel{
     public List<String> getValues() {
         List<String> retList = new ArrayList<>();
         retList.add(Integer.toString(this.get_id()));
-        retList.add(this.getDataCadastro().toString());
-        retList.add(this.getDataAlteracao().toString());
+        retList.add(DateTimeUtil.toString(this.getDataCadastro(), "yyyy-MM-dd HH:mm:ss"));
+        retList.add(DateTimeUtil.toString(this.getDataAlteracao(), "yyyy-MM-dd HH:mm:ss"));
         retList.add(this.getIsbn());
         retList.add(this.getTitulo());
         retList.add(this.getSinopse());

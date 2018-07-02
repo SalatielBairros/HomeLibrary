@@ -36,6 +36,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(Validate()){
                     usuarioController.insereDado(getData());
+                    Toast.makeText(CadastroUsuarioActivity.this, R.string.salvo_sucesso, Toast.LENGTH_LONG).show();
                     finish();
                 }
             }

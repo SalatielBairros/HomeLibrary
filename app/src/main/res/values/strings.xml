@@ -44,4 +44,6 @@
     <string name="consultar_livro">Consultar Livro</string>
     <string name="sair">Sair</string>
     <string name="livro_existe_cadastrado">Já existe este livro cadastrado.</string>
+    <string name="erro_inserir_registro">Erro ao inserir registro</string>
+    <string name="salvo_sucesso">Registro salvo com sucesso.</string>
 </resources>
