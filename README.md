@@ -1,6 +1,6 @@
 # HomeLibrary
 Aplicativo para controle de biblioteca pessoal, com controle de leitura e empréstimos.
-Este projeto é inicialmente referente ao Marco Avaliativo 2 da disciplina de Computação para Dispositivos Móveis 2018/2.
+Este projeto é inicialmente referente ao Marco Avaliativo 2 da disciplina de Computação para Dispositivos Móveis 2018/2 da FADERGS, porém será dado continuidade na ideia e novas contribuições para o projeto são muito bem-vindas.
 
 
 ## Ferramenta para desenvolvimento.
@@ -8,29 +8,26 @@ Android Studio com Gradle.
 Escrito em linguagem de programação JAVA.
 
 
-### O que é?
-Aplicativo para organização de biblioteca pessoal. Ele terá uma conexão com o WebService da Amazon, puxando dados em tempo real dos livros para melhor organização e melhor etiquetação dos respectivos livros.
-Também conta com label de lidos e não lidos.
-Notas dos livros.
+## O que é?
+### A ideia
+Aplicativo para organização de biblioteca pessoal. Ele terá uma conexão com os WebServices da Google e da Amazon, buscando dados em tempo real dos livros para melhor organização e melhor etiquetação dos mesmos. A leitura do código dos livros para busca nos WebServices poderá ser feita via leitura de código de barras utilizando a câmera do app, ou digitando o mesmo no cadastro do livro.
+Além disso, o aplicativo contará com a funcionalidade de controle de leitura, registro de citações, inclusão resenhas e notas e controle de empréstimos.
 
 
-## Inovação?
-HomeLibrary contará com a tecnologia de leitura de QRCode para etiquetação e comunicação com o Service da Amazon.
+#### Implementação futura.
+Criação de WebService para armazenar as informações dos livros, especialmente os cadastrados manualmente devido a ausência de informações na Amazon e Google. Esse WebService poderá ser acessado de um site e também terá o controle dos usuários, logins, históricos, entre outros.
 
 
-### Implementação futura.
-Controle de trocas - O usuário poderá listar os livros que estão emprestados, ou que são emprestados dentro do aplicativo.
+### O que já foi feito
+Até o momento o aplicativo já possui o cadastro de usuário, login interno e o cadastro de livros buscando informações no WebService Google Books, além de toda a estruturação básica do código.
 
 
-## Requisitos não funcionais.
+#### Requisitos não funcionais.
 Min API 23.
 
 
-#### Direitos Autorais.
-Ideia criada e desenvolvida inicialmente pelo dono do projeto: [LinkedIn Salatiel](https://www.linkedin.com/in/salatiel-bairros/)Salatiel Costa Bairros.
-Qualquer cópia do software aqui apresentado não deverá ser vendida sem consenso do criador do projeto. Contribuições são sempre bem-vindas.
+## Direitos Autorais.
+Ideia criada e desenvolvida por: [Salatiel Bairros](https://www.linkedin.com/in/salatiel-bairros/) com auxílio de [Rhuan Dornelles](https://www.linkedin.com/in/rhuan-dornelles/) na documentação.
 
+Qualquer cópia do software aqui apresentado não deverá ser vendida sem consenso do criador do projeto, conforme licensa do repositório. Contribuições são sempre bem-vindas, mediante aprovação de pull-request.
 
-###### Agradecimentos.
-Ao dono e mente por trás do projeto: [LinkedIn Salatiel](https://www.linkedin.com/in/salatiel-bairros/)_Salatiel Costa Bairros_.
-Ao seu ajudante *(que não fez tanta coisa)*: [LinkedIn Rhuan](https://www.linkedin.com/in/rhuan-dornelles/)Rhuan do Espirito Santo Dornelles.
