@@ -27,7 +27,7 @@ Min API 23.
 
 
 ## Direitos Autorais.
-Ideia criada e desenvolvida por: [Salatiel Bairros](https://www.linkedin.com/in/salatiel-bairros/) com auxílio de [Rhuan Dornelles](https://www.linkedin.com/in/rhuan-dornelles/) na documentação.
+Ideia criada e desenvolvida por [Salatiel Bairros](https://www.linkedin.com/in/salatiel-bairros/) com auxílio de [Rhuan Dornelles](https://www.linkedin.com/in/rhuan-dornelles/) na documentação.
 
 Qualquer cópia do software aqui apresentado não deverá ser vendida sem consenso do criador do projeto, conforme licensa do repositório. Contribuições são sempre bem-vindas, mediante aprovação de pull-request.
 
