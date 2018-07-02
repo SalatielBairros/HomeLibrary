@@ -46,4 +46,9 @@
     <string name="livro_existe_cadastrado">Já existe este livro cadastrado.</string>
     <string name="erro_inserir_registro">Erro ao inserir registro</string>
     <string name="salvo_sucesso">Registro salvo com sucesso.</string>
+    <string name="excluindo_livro">Excluindo livro</string>
+    <string name="confirma_exclusao_livro">Confirma a exclusão do livro selecionado?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="registro_removido_sucesso">Registro removido com sucesso.</string>
 </resources>
