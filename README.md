@@ -17,10 +17,10 @@ Além disso, o aplicativo contará com a funcionalidade de controle de leitura, 
 
 #### Implementação futura
 Criação de WebService para armazenar as informações dos livros, especialmente os cadastrados manualmente devido a ausência de informações na Amazon e Google. Esse WebService poderá ser acessado de um site e também terá o controle dos usuários, logins, históricos, entre outros.
-
+Todas essas implementações continuarão disponíveis aqui e o projeto continuará completamente Open Source.
 
 ### O que já foi feito
-Até o momento o aplicativo já possui o cadastro de usuário, login interno e o cadastro de livros buscando informações no WebService Google Books, além de toda a estruturação básica do código.
+Até o momento o aplicativo já possui o cadastro de usuário, login interno e o cadastro de livros buscando informações no WebService Google Books, além de toda a estruturação básica do código. O foco dado para a _Milestone Marco Avaliativo 2_ foi a estrutura do projeto, com interfaces, layout base, entre outros, visto que há a pretenção de continuar o projeto após esta primeira Milestone.
 
 <p>  
   <img width="250" height="450" src="https://raw.githubusercontent.com/SalatielBairros/HomeLibrary/master/docs/Screenshots/Screenshot_1530503718.png">
@@ -29,6 +29,11 @@ Até o momento o aplicativo já possui o cadastro de usuário, login interno e o
 </p>
 
 ---
+
+#### Dificuldades encontradas
+- Tempo livre para desenvolvimento;
+- Layout;
+- Gradle.
 
 #### Requisitos não funcionais.
 Min API 23.
