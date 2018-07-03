@@ -1,7 +1,7 @@
 
 # HomeLibrary
 Aplicativo para controle de biblioteca pessoal, com controle de leitura e empréstimos.
-Este projeto é inicialmente referente ao Marco Avaliativo 2 da disciplina de Computação para Dispositivos Móveis 2018/2 da FADERGS, porém será dado continuidade na ideia e novas contribuições para o projeto são muito bem-vindas.
+Este projeto é inicialmente referente ao Marco Avaliativo 2 da disciplina de Computação para Dispositivos Móveis 2018/1 da FADERGS, porém será dado continuidade na ideia e novas contribuições para o projeto são muito bem-vindas.
 
 
 ## Ferramenta para desenvolvimento.
