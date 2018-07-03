@@ -14,13 +14,20 @@ Aplicativo para organização de biblioteca pessoal. Ele terá uma conexão com 
 Além disso, o aplicativo contará com a funcionalidade de controle de leitura, registro de citações, inclusão resenhas e notas e controle de empréstimos.
 
 
-#### Implementação futura.
+#### Implementação futura
 Criação de WebService para armazenar as informações dos livros, especialmente os cadastrados manualmente devido a ausência de informações na Amazon e Google. Esse WebService poderá ser acessado de um site e também terá o controle dos usuários, logins, históricos, entre outros.
 
 
 ### O que já foi feito
 Até o momento o aplicativo já possui o cadastro de usuário, login interno e o cadastro de livros buscando informações no WebService Google Books, além de toda a estruturação básica do código.
 
+<p>  
+  <img width="250" height="450" src="https://raw.githubusercontent.com/SalatielBairros/HomeLibrary/master/docs/Screenshots/Screenshot_1530503718.png">
+  <img width="250" height="450" src="https://raw.githubusercontent.com/SalatielBairros/HomeLibrary/master/docs/Screenshots/Screenshot_1530503658.png">
+  <img width="250" height="450" src="https://raw.githubusercontent.com/SalatielBairros/HomeLibrary/master/docs/Screenshots/Screenshot_1530503711.png">  
+</p>
+
+---
 
 #### Requisitos não funcionais.
 Min API 23.
